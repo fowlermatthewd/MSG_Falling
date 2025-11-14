@@ -27,6 +27,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var grappleLine: SKShapeNode?
     private var grappleTargetPoint: CGPoint?
 
+    // post-grapple drift tracking
+    private var lastGrappleDirection: CGVector = .zero
+    private var lastGrappleSpeed: CGFloat = 0
+
     // spawning
     private var spawnTimer: Timer?
     private var spawnInterval: TimeInterval = 6.0
@@ -337,8 +341,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         grappleLine = nil
         // stop any pull action on player
         player?.removeAction(forKey: "grapplePull")
-        // re-enable player physics control
-        player?.physicsBody?.velocity = .zero
+        // apply horizontal drift based on the last grapple before clearing velocities
+        applyPostGrappleDrift()
     }
 
     private func drawGrappleLine(from start: CGPoint, to end: CGPoint) {
@@ -381,6 +385,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         line.run(fade)
     }
 
+    // Apply horizontal drift after a grapple completes, proportional to grapple speed and direction.
+    private func applyPostGrappleDrift() {
+        guard let p = player, let body = p.physicsBody else { return }
+        // Only apply if we had a meaningful direction
+        let mag = sqrt(lastGrappleDirection.dx * lastGrappleDirection.dx + lastGrappleDirection.dy * lastGrappleDirection.dy)
+        guard mag > 0.0001 else { return }
+        // Horizontal component of the unit direction
+        let ux = lastGrappleDirection.dx / mag
+        // Scale drift by speed and a tuning factor
+        let driftScale: CGFloat = 0.65 // tuning factor for how strong the carry is
+        let vx = ux * lastGrappleSpeed * driftScale
+
+        // Apply horizontal velocity and re-enable damping so it decays naturally
+        body.affectedByGravity = false
+        body.allowsRotation = false
+        // Preserve any vertical velocity (usually 0 after grapple), only set horizontal
+        let currentVy = body.velocity.dy
+        body.velocity = CGVector(dx: vx, dy: currentVy)
+
+        // Temporarily increase linear damping to let drift decay smoothly
+        let originalDamping = body.linearDamping
+        body.linearDamping = max(originalDamping, 2.0)
+
+        // After a short time, restore damping to original to avoid over-damping future moves
+        let restore = SKAction.sequence([
+            SKAction.wait(forDuration: 0.6),
+            SKAction.run { [weak body] in
+                body?.linearDamping = originalDamping
+            }
+        ])
+        p.run(restore, withKey: "restoreDampingAfterDrift")
+
+        // Clear last values so repeated taps don't compound unintentionally
+        lastGrappleDirection = .zero
+        lastGrappleSpeed = 0
+    }
+
     // Cast a ray from the player in the swipe direction to find the first obstacle hit
     private func raycastToFirstObstacle(from origin: CGPoint, direction: CGVector, maxDistance: CGFloat = 2000) -> CGPoint? {
         // step along the direction and test nodes at points; SpriteKit doesn't expose a built-in raycast for static bodies
@@ -414,12 +455,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         isGrappling = true
         grappleTargetPoint = hitPoint
+        lastGrappleDirection = direction
+
         drawGrappleLine(from: origin, to: hitPoint)
 
         // Pull the player along the line to the target point
         let distance = hypot(hitPoint.x - origin.x, hitPoint.y - origin.y)
         let pullSpeed: CGFloat = 300.0 // points per second
         let duration = TimeInterval(distance / pullSpeed)
+        lastGrappleSpeed = pullSpeed
 
         // Freeze rotation and clear velocities to make the pull feel tight
         if let body = p.physicsBody {
@@ -427,6 +471,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             body.angularVelocity = 0
             body.allowsRotation = false
             body.affectedByGravity = false
+            body.linearDamping = 0.5
         }
 
         // Action that updates the line while moving
@@ -511,7 +556,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 p.run(move)
             }
              */
-             
+
         } else {
             // Create a grapple toward the swipe direction
             let angle = atan2(dy, dx)
