@@ -4,6 +4,8 @@
 //
 //  Created by Matthew fowler on 11/11/25.
 //
+// swipe down its like a grapple that pulls, tap to unhook
+// swipe up to grapple up and swing
 
 import SpriteKit
 import GameplayKit
@@ -20,10 +22,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var player: SKSpriteNode?
     private var isVertical = false
 
+    // grapple
+    private var isGrappling = false
+    private var grappleLine: SKShapeNode?
+    private var grappleTargetPoint: CGPoint?
+
     // spawning
     private var spawnTimer: Timer?
-    private var spawnInterval: TimeInterval = 1.0
-    private var scrollDuration: TimeInterval = 3.5
+    private var spawnInterval: TimeInterval = 6.0
+    private var scrollDuration: TimeInterval = 7.5
     private var obstacleZ: CGFloat = -1
 
     // swipe tracking
@@ -49,24 +56,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     // MARK: - Setup
     private func setupPlayer() {
-        // Create a simple rectangular player sprite
-        let size = CGSize(width: 60, height: 24) // starts horizontal
-        let p = SKSpriteNode(color: .systemTeal, size: size)
+        // Create the composite PlayerNode (guy falling with clothes flapping)
+        let size = CGSize(width: 60, height: 24) // visual size; starts horizontal
+        let p = PlayerNode(size: size)
         // use scene size for placement so it fills full view
         p.position = CGPoint(x: self.size.width / 2.0, y: self.size.height - 120)
         p.zPosition = 10
 
-        p.physicsBody = SKPhysicsBody(rectangleOf: p.size)
-        // Make the player dynamic so SpriteKit reports contacts with obstacles.
-        // Disable gravity and rotation so the player doesn't move physically.
-        p.physicsBody?.isDynamic = true
-        p.physicsBody?.affectedByGravity = false
-        p.physicsBody?.allowsRotation = false
-        // use precise collision detection for reliable contacts with fast-moving obstacles
-        p.physicsBody?.usesPreciseCollisionDetection = true
-        p.physicsBody?.categoryBitMask = PhysicsCategory.player
-        p.physicsBody?.contactTestBitMask = PhysicsCategory.obstacle
-        p.physicsBody?.collisionBitMask = PhysicsCategory.none
+        // Prefer the texture-based physics body created inside PlayerNode (so debug outlines match the sprite).
+        // If PlayerNode didn't create one (missing texture), create a simple fallback rectangle body.
+        if let body = p.physicsBody {
+            // Configure masks on the existing body instead of replacing it (prevents replacing a tighter texture body with a box)
+            body.isDynamic = true
+            body.affectedByGravity = false
+            body.allowsRotation = false
+            body.usesPreciseCollisionDetection = true
+            body.categoryBitMask = PhysicsCategory.player
+            body.contactTestBitMask = PhysicsCategory.obstacle
+            body.collisionBitMask = PhysicsCategory.none
+        } else {
+            let body = SKPhysicsBody(rectangleOf: p.size)
+            body.isDynamic = true
+            body.affectedByGravity = false
+            body.allowsRotation = false
+            body.usesPreciseCollisionDetection = true
+            body.categoryBitMask = PhysicsCategory.player
+            body.contactTestBitMask = PhysicsCategory.obstacle
+            body.collisionBitMask = PhysicsCategory.none
+            p.physicsBody = body
+        }
 
         addChild(p)
         isVertical = false
@@ -100,8 +118,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK: - Game flow
     private func startGame() {
         runningGame = true
-        spawnInterval = 0.9
-        scrollDuration = 3.5
+        spawnInterval = 3.9
+        scrollDuration = 9.5
         startSpawning()
     }
 
@@ -112,12 +130,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private func resetGame(after delay: TimeInterval = 0.5) {
         stopGame()
+        cancelGrapple()
 
         // small flash to indicate hit
+        // alpha pulse so PlayerNode children are affected visually
         let flash = SKAction.sequence([
-            SKAction.run { [weak self] in self?.player?.color = .systemRed },
-            SKAction.wait(forDuration: 0.15),
-            SKAction.run { [weak self] in self?.player?.color = .systemTeal }
+            SKAction.run { [weak self] in self?.player?.alpha = 0.25 },
+            SKAction.wait(forDuration: 0.12),
+            SKAction.run { [weak self] in self?.player?.alpha = 1.0 }
         ])
         player?.run(flash)
 
@@ -130,7 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if let p = self.player {
                     p.position = CGPoint(x: self.size.width / 2.0, y: self.size.height - 120)
                 }
-                self.setOrientation(vertical: false) // reset to horizontal start
+                self.setOrientation(angle: 0) // reset to horizontal start
                 self.startGame()
             }
         ]))
@@ -143,6 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         // stop spawning and mark not running
         stopGame()
+        cancelGrapple()
 
         // freeze actions & physics by setting speeds to 0 (so nodes stop moving but touches still work)
         self.speed = 0.0
@@ -194,6 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // unfreeze
         self.speed = 1.0
         self.physicsWorld.speed = 1.0
+        cancelGrapple()
 
         // clear obstacles
         removeAllObstacles()
@@ -202,7 +224,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let p = player {
             p.position = CGPoint(x: self.size.width / 2.0, y: self.size.height - 120)
         }
-        setOrientation(vertical: false)
+        setOrientation(angle: 0)
 
         // restart
         startGame()
@@ -307,6 +329,122 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         node.run(SKAction.sequence([move, remove]))
     }
 
+    // MARK: - Grapple helpers
+    private func cancelGrapple() {
+        isGrappling = false
+        grappleTargetPoint = nil
+        grappleLine?.removeFromParent()
+        grappleLine = nil
+        // stop any pull action on player
+        player?.removeAction(forKey: "grapplePull")
+        // re-enable player physics control
+        player?.physicsBody?.velocity = .zero
+    }
+
+    private func drawGrappleLine(from start: CGPoint, to end: CGPoint) {
+        grappleLine?.removeFromParent()
+        let path = CGMutablePath()
+        path.move(to: start)
+        path.addLine(to: end)
+        let line = SKShapeNode(path: path)
+        line.strokeColor = .cyan
+        line.lineWidth = 3.0
+        line.zPosition = 999
+        addChild(line)
+        grappleLine = line
+    }
+
+    // Visualize a grapple attempt even if it doesn't connect
+    private func showGrappleMiss(from origin: CGPoint, direction: CGVector) {
+        let maxDistance: CGFloat = 520.0
+        let dirLen = sqrt(direction.dx * direction.dx + direction.dy * direction.dy)
+        guard dirLen > 0.0001 else { return }
+        let ux = direction.dx / dirLen
+        let uy = direction.dy / dirLen
+        let missEnd = CGPoint(x: origin.x + ux * maxDistance, y: origin.y + uy * maxDistance)
+
+        let path = CGMutablePath()
+        path.move(to: origin)
+        path.addLine(to: missEnd)
+        let line = SKShapeNode(path: path)
+        line.strokeColor = .cyan
+        line.lineWidth = 2.0
+        line.alpha = 0.9
+        line.zPosition = 998
+        addChild(line)
+
+        let fade = SKAction.sequence([
+            SKAction.wait(forDuration: 0.05),
+            SKAction.fadeOut(withDuration: 0.18),
+            SKAction.removeFromParent()
+        ])
+        line.run(fade)
+    }
+
+    // Cast a ray from the player in the swipe direction to find the first obstacle hit
+    private func raycastToFirstObstacle(from origin: CGPoint, direction: CGVector, maxDistance: CGFloat = 2000) -> CGPoint? {
+        // step along the direction and test nodes at points; SpriteKit doesn't expose a built-in raycast for static bodies
+        let steps = 120
+        let stepDistance = maxDistance / CGFloat(steps)
+        let dirLen = sqrt(direction.dx * direction.dx + direction.dy * direction.dy)
+        guard dirLen > 0.0001 else { return nil }
+        let ux = direction.dx / dirLen
+        let uy = direction.dy / dirLen
+        for i in 1...steps {
+            let d = CGFloat(i) * stepDistance
+            let pt = CGPoint(x: origin.x + ux * d, y: origin.y + uy * d)
+            // Bounds check to avoid sampling far outside scene
+            if pt.x < -100 || pt.x > self.size.width + 100 || pt.y < -300 || pt.y > self.size.height + 300 { continue }
+            let nodesHere = nodes(at: pt)
+            if nodesHere.contains(where: { $0.name == "obstacle" }) {
+                return pt
+            }
+        }
+        return nil
+    }
+
+    private func beginGrapple(toward direction: CGVector) {
+        guard !isGrappling, let p = player else { return }
+        // Find first obstacle point in that direction
+        let origin = p.position
+        guard let hitPoint = raycastToFirstObstacle(from: origin, direction: direction) else {
+            // Show a short miss line even if nothing is hit
+            showGrappleMiss(from: origin, direction: direction)
+            return
+        }
+        isGrappling = true
+        grappleTargetPoint = hitPoint
+        drawGrappleLine(from: origin, to: hitPoint)
+
+        // Pull the player along the line to the target point
+        let distance = hypot(hitPoint.x - origin.x, hitPoint.y - origin.y)
+        let pullSpeed: CGFloat = 300.0 // points per second
+        let duration = TimeInterval(distance / pullSpeed)
+
+        // Freeze rotation and clear velocities to make the pull feel tight
+        if let body = p.physicsBody {
+            body.velocity = .zero
+            body.angularVelocity = 0
+            body.allowsRotation = false
+            body.affectedByGravity = false
+        }
+
+        // Action that updates the line while moving
+        let moveAction = SKAction.move(to: hitPoint, duration: duration)
+        moveAction.timingMode = .easeIn
+
+        let updateLine = SKAction.customAction(withDuration: duration) { [weak self] _, _ in
+            guard let self = self, let pl = self.player, let target = self.grappleTargetPoint else { return }
+            self.drawGrappleLine(from: pl.position, to: target)
+        }
+        let group = SKAction.group([moveAction, updateLine])
+        let finish = SKAction.run { [weak self] in
+            guard let self = self else { return }
+            self.cancelGrapple()
+        }
+        p.run(SKAction.sequence([group, finish]), withKey: "grapplePull")
+    }
+
     // MARK: - Swipes / Touches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let t = touches.first {
@@ -341,10 +479,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let dy = end.y - start.y
 
         let distance = hypot(dx, dy)
-        let minDistance: CGFloat = 30
+        let minDistance: CGFloat = 20
         let maxTime: TimeInterval = 0.6
 
         if distance < minDistance || dt > maxTime {
+            if isGrappling {
+                // Tap while grappling cancels the grapple
+                cancelGrapple()
+                return
+            }
+            /*
             // treat as tap: optionally, move player horizontally to tap x
             let targetX = max(0 + p.size.width/2, min(self.size.width - p.size.width/2, end.x))
             let duration: TimeInterval = 0.15
@@ -366,45 +510,55 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let move = SKAction.moveTo(x: targetX, duration: duration)
                 p.run(move)
             }
+             */
+             
         } else {
-            // determine main direction
-            if abs(dy) > abs(dx) {
-                // vertical swipe
-                setOrientation(vertical: true)
-            } else {
-                // horizontal swipe
-                setOrientation(vertical: false)
-            }
+            // Create a grapple toward the swipe direction
+            let angle = atan2(dy, dx)
+            let dir = CGVector(dx: cos(angle), dy: sin(angle))
+            beginGrapple(toward: dir)
         }
 
         touchStartPoint = nil
         touchStartTime = nil
     }
 
-    // Change orientation of the player
-    private func setOrientation(vertical: Bool) {
-        guard vertical != isVertical else { return }
-        isVertical = vertical
-
-        let newSize = vertical ? CGSize(width: 24, height: 60) : CGSize(width: 60, height: 24)
-        let rotate = SKAction.rotate(toAngle: vertical ? CGFloat.pi/2 : 0, duration: 0.12, shortestUnitArc: true)
-        let resize = SKAction.customAction(withDuration: 0.12) { [weak self] _, _ in
-            guard let s = self else { return }
-            // animate size by replacing texture/color node size; preserve position
-            guard let p = s.player else { return }
-            p.size = newSize
-            // update physics body
-            p.physicsBody = SKPhysicsBody(rectangleOf: p.size)
-            // preserve dynamic behavior so contacts fire
-            p.physicsBody?.isDynamic = true
-            p.physicsBody?.affectedByGravity = false
-            p.physicsBody?.allowsRotation = false
-            p.physicsBody?.usesPreciseCollisionDetection = true
-            p.physicsBody?.categoryBitMask = PhysicsCategory.player
-            p.physicsBody?.contactTestBitMask = PhysicsCategory.obstacle
-            p.physicsBody?.collisionBitMask = PhysicsCategory.none
+    // Rotate player to a specific angle (radians) based on swipe direction. Keeps the player's size
+    // constant and recreates the physics body after rotating so contacts remain accurate.
+    private func setOrientation(angle: CGFloat) {
+        // normalize angle to [-pi, pi] for shortest rotation
+        let normalized = atan2(sin(angle), cos(angle))
+        // If already roughly at the same angle, skip
+        if let p = player {
+            let current = atan2(sin(p.zRotation), cos(p.zRotation))
+            let delta = abs(current - normalized)
+            if delta < 0.02 { return }
         }
-        player?.run(SKAction.group([rotate, resize]))
+
+        // ensure physics body matches the player's current size and will be ready immediately
+        if let p = player {
+            let body = SKPhysicsBody(rectangleOf: p.size)
+            body.isDynamic = true
+            body.affectedByGravity = false
+            body.allowsRotation = false
+            body.usesPreciseCollisionDetection = true
+            body.categoryBitMask = PhysicsCategory.player
+            body.contactTestBitMask = PhysicsCategory.obstacle
+            body.collisionBitMask = PhysicsCategory.none
+            p.physicsBody = body
+        }
+
+        // rotate visually (physics body already assigned so contacts will fire during the animation)
+        let rotate = SKAction.rotate(toAngle: normalized, duration: 0.12, shortestUnitArc: true)
+        // update visual scale for near-vertical orientations
+        if let pn = player as? PlayerNode {
+            // consider vertical if within 30 degrees of straight up/down
+            let deg = abs(normalized) * 180.0 / .pi
+            let verticalThresholdDeg: CGFloat = 30.0
+            let isNearVertical = abs(deg - 90.0) <= verticalThresholdDeg
+            pn.setVisualScaleFor(vertical: isNearVertical)
+        }
+        player?.run(rotate)
     }
 
     // MARK: - Collisions
@@ -434,3 +588,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // e.g., shorten spawnInterval or reduce scrollDuration over time
     }
 }
+

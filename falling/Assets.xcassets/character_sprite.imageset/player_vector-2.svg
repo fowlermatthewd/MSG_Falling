@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" version="1.1">
+ <defs>
+  <g id="Symbol_8_0_Layer0_0_FILL">
+   <path d="m-8.6,22.15q3.1,2.9 7.6,3.75q4.76,-7.89 6.6,-17.15l-13.5,-2.45q-1.2,7.93 -0.7,15.85z" fill="#FFE0B1" id="svg_1"/>
+   <path d="m6.1,8.85l0.5,-2.95l-15.45,-2.8q-1.3,0.6 -0.5,2.95l1.45,0.25l13.5,2.45l0.5,0.1z" fill="#25A85C" id="svg_2"/>
+   <path d="m0.95,-6.8l-0.05,0q-0.58,-0.11 -1.15,-0.15q-5.07,-0.09 -8.6,10.05l15.45,2.8l0.65,-3.55q0.6,-3.2 -1.25,-5.95q-1.85,-2.65 -5.05,-3.2z" fill="#2ECC71" id="svg_3"/>
+  </g>
+  <g id="Symbol_9_0_Layer0_0_FILL">
+   <path d="m0.65,-9q2.45,2.2 4.25,7.15l0.2,0.8l0,-0.05q3.1,-4.35 -4.45,-7.9m-7.4,6.35q1.25,-0.1 2.95,-0.7q1.75,-0.6 2.85,-1.35q1.1,-0.7 1,-1.15q-0.05,-0.4 -1.35,-0.3q-1.2,0.15 -2.95,0.7q-1.7,0.6 -2.8,1.3q-1.15,0.7 -1.1,1.15q0.1,0.45 1.4,0.35z" fill="#E7CBA0" id="svg_4"/>
+   <path d="m4.9,-1.85q-1.8,-4.95 -4.25,-7.15l-9.65,2.55q-1.2,0.3 -0.95,1.4l0.15,0.55q2.7,12.1 9.6,10.3q2.45,-0.6 4.85,-1.85q1.6,-0.8 1.3,-2l-0.05,-0.25q-0.4,-1.45 -0.8,-2.8l0,0.05l-0.2,-0.8m-8.7,-1.5q-1.7,0.6 -2.95,0.7q-1.3,0.1 -1.4,-0.35q-0.05,-0.45 1.1,-1.15q1.1,-0.7 2.8,-1.3q1.75,-0.55 2.95,-0.7q1.3,-0.1 1.35,0.3q0.1,0.45 -1,1.15q-1.1,0.75 -2.85,1.35z" fill="#FFE0B1" id="svg_5"/>
+  </g>
+  <g id="Symbol_18_0_Layer0_0_FILL">
+   <path d="m20,10l0,-4.1l-39,0l0,4.1l39,0z" fill="#B8824D" id="svg_6"/>
+   <path d="m20,-21l-39,0l0,26.9l39,0l0,-26.9z" fill="#2ECC71" id="svg_7"/>
+  </g>
+  <g id="Symbol_17_0_Layer0_0_FILL">
+   <path d="m-7.35,1.7q2.95,1.95 7.15,1.95q4.2,0 7.15,-1.95q1.75,-1.15 2.45,-2.6l-19.2,0q0.7,1.45 2.45,2.6z" fill="#D7BD93" id="svg_8"/>
+   <path d="m19.15,-5.45q1.55,-10.1 -0.05,-20.65q-0.65,-4.45 -5.1,-4.45l-30.35,0q-4.4,0 -5.1,4.55q-1.5,10.3 0,20.6q0.7,4.5 5.1,4.5l6.55,0l19.2,0l4.6,0q4.45,0 5.15,-4.55z" fill="#FFE0B1" id="svg_9"/>
+  </g>
+  <g id="Symbol_17_0_Layer0_1_FILL">
+   <path d="m-15.7,-41.45l-2.9,4.75q21.75,-1.5 41.75,-17q-25.25,5.35 -38.85,12.25m16.4,38.75q12.3,-0.3 20.45,-11.85q3.15,-4.5 3,-13.45q-0.05,-3.3 -0.5,-4.65q-0.1,-0.3 -0.2,-0.55q-0.72,-2.16 -0.85,-2.7q0.3,1.42 0.15,2.65q-3.45,27.1 -23.45,30.45q-19.15,-3.9 -22.5,-30.4q-2.4,13 1.6,18.7q8.15,11.55 20.45,11.85q0.35,0.05 1.05,-0.05q0.5,0.05 0.8,0z" fill="#C48A51" id="svg_10"/>
+   <path d="m22.75,-33.25q0.15,-1.23 -0.15,-2.65l0,-0.1q-1.8,-7.35 0.55,-17.7q-20,15.5 -41.75,17l-4.6,3.5q3.35,26.5 22.5,30.4q20,-3.35 23.45,-30.45z" fill="#B8824D" id="svg_11"/>
+  </g>
+  <g id="Symbol_16_0_Layer0_0_FILL">
+   <path d="m0.25,3.7q4.2,0 7.15,-1.95q1.75,-1.15 2.45,-2.6l-19.2,0q0.7,1.45 2.45,2.6q2.95,1.95 7.15,1.95z" fill="#D7BD93" id="svg_12"/>
+   <path d="m19.55,-26.05q-0.65,-4.45 -5.1,-4.45l-30.35,0q-4.4,0 -5.1,4.55q-1.5,10.3 0,20.6q0.7,4.5 5.1,4.5l6.55,0l19.2,0l4.6,0q4.45,0 5.15,-4.55q1.55,-10.1 -0.05,-20.65z" fill="#FFE0B1" id="svg_13"/>
+  </g>
+  <g id="Symbol_16_0_Layer0_1_FILL">
+   <path d="m-3.2,-14.8q0,-1.55 -1.1,-2.7q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65m7.1,5.85l-0.05,-2.4q-0.9,-0.3 -1.95,-0.3q-2.45,0 -4.25,1.8q-0.45,0.4 -0.75,0.9l7,0m11.5,-5.85q0,-1.55 -1.1,-2.7q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65z" fill="#FFFFFF" id="svg_14"/>
+   <path d="m-4.05,-23.6q-0.3,-0.3 -0.7,-0.35q-2.35,-0.4 -4.35,1.2q-1.3,1 -1.9,2.45q-0.15,0.4 0,0.8q0.15,0.4 0.55,0.5q0.4,0.2 0.75,0q0.4,-0.15 0.55,-0.5q0.4,-1 1.35,-1.7q1.3,-1 2.85,-0.8q0.3,0.05 0.7,-0.2q0.3,-0.25 0.4,-0.65q0.05,-0.45 -0.2,-0.75m17.9,5.15q0.4,0.15 0.75,-0.05q0.35,-0.1 0.5,-0.5q0.2,-0.45 0.05,-0.8q-0.6,-1.45 -1.95,-2.45q-1.95,-1.6 -4.3,-1.2q-0.4,0.05 -0.65,0.35q-0.25,0.3 -0.2,0.75q0.1,0.4 0.4,0.65q0.3,0.25 0.75,0.2q1.5,-0.2 2.75,0.8q0.9,0.7 1.35,1.7q0.1,0.35 0.55,0.55z" fill="#B8824D" id="svg_15"/>
+   <path d="m7.35,-8.2q-0.45,-0.9 -1.2,-1.65l-0.05,-0.05q-1,-1 -2.25,-1.45l0.05,2.4l-7,0q-0.25,0.35 -0.45,0.75q-0.25,0.45 -0.35,0.95q-0.1,0.35 0,0.6q0.1,0.35 0.4,0.5q0.25,0.2 0.55,0.2l9.7,0q0.3,0 0.6,-0.2q0.25,-0.15 0.35,-0.5q0.1,-0.25 0.05,-0.6q-0.15,-0.5 -0.4,-0.95z" fill="#7F7058" id="svg_16"/>
+  </g>
+  <g id="Symbol_16_0_Layer0_1_MEMBER_0_FILL">
+   <path d="m-3.95,-14.8q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95q0.9,0 1.5,-0.95q0.65,-0.9 0.65,-2.2m16.2,2.2q0.65,-0.9 0.65,-2.2q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95q0.9,0 1.5,-0.95z" fill="#7F7058" id="svg_17"/>
+  </g>
+  <g id="Symbol_16_0_Layer0_2_FILL">
+   <path d="m-15.25,-41.4l-2.9,4.75l-4.6,3.5q-2.4,13 1.25,25.25q4.95,-4.65 5.6,-16.5q4.75,-17.6 39.5,-29.25q-25.25,5.35 -38.85,12.25z" fill="#B8824D" id="svg_18"/>
+   <path d="m1.6,-26.15q8.35,2.4 17.75,2.15l1,8.1q4.55,-13.5 2.95,-19q-2.2,-7.65 0.3,-18.75q-34.75,11.65 -39.5,29.25q7.2,-4.9 17.5,-1.75z" fill="#C48A51" id="svg_19"/>
+  </g>
+  <g id="Symbol_11_0_Layer0_0_FILL">
+   <path d="m8.9,16.15l0,-5l-17.6,0l0,-0.05q-1.75,0.95 -3.2,2.9l0,2.15l20.8,0z" fill="#B8824D" id="svg_20"/>
+   <path d="m8.9,11.15l0.05,0l0,-3.4l-17.65,0l0,3.35l0,0.05l17.6,0z" fill="#2A7DB4" id="svg_21"/>
+   <path d="m6.4,-4.55q-2.6,-2.55 -6.25,-2.55l-0.05,0q-3.65,0 -6.2,2.55q-2.6,2.6 -2.6,6.25l0,6.05l17.65,0l0,-6.05q0,-3.65 -2.55,-6.25z" fill="#3498DB" id="svg_22"/>
+  </g>
+  <g id="Symbol_10_0_Layer0_0_FILL">
+   <path d="m19.25,9.4l0,-4.05l-38.5,0l0,4.05l38.5,0z" fill="#B8824D" id="svg_23"/>
+   <path d="m19.25,-21.35l-38.5,0l0,26.7l38.5,0l0,-26.7z" fill="#2ECC71" id="svg_24"/>
+  </g>
+  <g id="Symbol_12_0_Layer0_0_FILL">
+   <path d="m-7.7,3.15q2.95,1.95 7.15,1.95q4.2,0 7.15,-1.95q1.75,-1.15 2.45,-2.6l-19.2,0q0.7,1.45 2.45,2.6z" fill="#D7BD93" id="svg_25"/>
+   <path d="m18.8,-4q1.55,-10.1 -0.05,-20.65q-0.65,-4.45 -5.1,-4.45l-30.35,0q-4.4,0 -5.1,4.55q-1.5,10.3 0,20.6q0.7,4.5 5.1,4.5l6.55,0l19.2,0l4.6,0q4.45,0 5.15,-4.55z" fill="#FFE0B1" id="svg_26"/>
+  </g>
+  <g id="Symbol_12_0_Layer0_1_FILL">
+   <path d="m-5.1,-16.1q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65q0,-1.55 -1.1,-2.7m8.15,10.45l0,-3l-6.85,0q-0.3,0 -0.55,0.2q-0.3,0.15 -0.4,0.5q-0.1,0.25 0,0.6q0.1,0.5 0.35,0.95q0.2,0.4 0.45,0.75l7,0m10.45,-10.45q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65q0,-1.55 -1.1,-2.7z" fill="#FFFFFF" id="svg_27"/>
+   <path d="m-4.65,-21.3q0.35,0.15 0.75,0q0.35,-0.2 0.55,-0.55q0.15,-0.4 0,-0.75q-0.2,-0.4 -0.55,-0.55q-2.2,-0.95 -4.5,0.05q-1.55,0.65 -2.5,1.9q-0.25,0.3 -0.2,0.75q0.05,0.4 0.4,0.65q0.3,0.25 0.75,0.2q0.4,-0.05 0.65,-0.4q0.65,-0.85 1.7,-1.25q1.5,-0.65 2.95,-0.05m15.85,1.55q1.05,0.4 1.7,1.25q0.25,0.35 0.7,0.4q0.4,0.05 0.7,-0.2q0.35,-0.25 0.4,-0.65q0.05,-0.45 -0.2,-0.75q-0.95,-1.25 -2.5,-1.9q-2.3,-1 -4.45,-0.05q-0.4,0.15 -0.55,0.55q-0.2,0.35 0,0.75q0.15,0.35 0.55,0.55q0.35,0.15 0.75,0q1.4,-0.6 2.9,0.05z" fill="#B8824D" id="svg_28"/>
+   <path d="m6.5,-6.4q0.25,-0.45 0.4,-0.95q0.05,-0.35 -0.05,-0.6q-0.1,-0.35 -0.35,-0.5q-0.3,-0.2 -0.6,-0.2l-2.85,0l0,3l-7,0q0.3,0.5 0.75,0.9q1.8,1.8 4.25,1.8q2.45,0 4.2,-1.75l0.05,-0.05q0.75,-0.75 1.2,-1.65z" fill="#7F7058" id="svg_29"/>
+  </g>
+  <g id="Symbol_12_0_Layer0_1_MEMBER_0_FILL">
+   <path d="m11.45,-11.2q0.65,-0.9 0.65,-2.2q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95q0.9,0 1.5,-0.95z" fill="#7F7058" id="svg_30"/>
+  </g>
+  <g id="Symbol_12_0_Layer0_1_MEMBER_1_FILL">
+   <path d="m-5.4,-11.2q0.65,-0.9 0.65,-2.2q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95q0.9,0 1.5,-0.95z" fill="#7F7058" id="svg_31"/>
+  </g>
+  <g id="Symbol_12_0_Layer0_2_FILL">
+   <path d="m-23.55,-31.75q-2.4,13 1.25,25.25q4.95,-4.65 5.6,-16.5q4.75,-17.6 39.5,-29.25q-25.25,5.35 -38.85,12.25l-2.9,4.75l-4.6,3.5z" fill="#B8824D" id="svg_32"/>
+   <path d="m0.8,-24.75q8.35,2.4 17.75,2.15l1,8.1q4.55,-13.5 2.95,-19q-2.2,-7.65 0.3,-18.75q-34.75,11.65 -39.5,29.25q7.2,-4.9 17.5,-1.75z" fill="#C48A51" id="svg_33"/>
+  </g>
+  <g id="Symbol_15_0_Layer0_0_FILL">
+   <path d="m0.25,3.65q4.2,0 7.15,-1.95q1.75,-1.15 2.45,-2.6l-19.2,0q0.7,1.45 2.45,2.6q2.95,1.95 7.15,1.95z" fill="#D7BD93" id="svg_34"/>
+   <path d="m19.55,-26.1q-0.65,-4.45 -5.1,-4.45l-30.35,0q-4.4,0 -5.1,4.55q-1.5,10.3 0,20.6q0.7,4.5 5.1,4.5l6.55,0l19.2,0l4.6,0q4.45,0 5.15,-4.55q1.55,-10.1 -0.05,-20.65z" fill="#FFE0B1" id="svg_35"/>
+  </g>
+  <g id="Symbol_15_0_Layer0_1_FILL">
+   <path d="m-3.2,-14.85q0,-1.55 -1.1,-2.7q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65m17.5,-2.7q-1,-1.1 -2.55,-1.1q-1.55,0 -2.65,1.1q-1,1.15 -1,2.7q0,1.55 1,2.65q1.1,1.15 2.65,1.15q1.55,0 2.55,-1.15q1.1,-1.1 1.1,-2.65q0,-1.55 -1.1,-2.7z" fill="#FFFFFF" id="svg_36"/>
+   <path d="m-3.4,-20.9q0.2,0.3 0.65,0.35q0.4,0.05 0.75,-0.2q0.3,-0.25 0.4,-0.65q0,-0.4 -0.25,-0.75q-1.45,-1.95 -3.9,-2.2q-1.65,-0.2 -3.1,0.4q-0.35,0.15 -0.55,0.55q-0.2,0.4 0.05,0.75q0.1,0.35 0.55,0.55q0.3,0.2 0.75,-0.05q0.95,-0.35 2.05,-0.2q1.65,0.2 2.6,1.45m16.85,-1.8q-1.4,-0.6 -3.1,-0.4q-2.5,0.25 -3.85,2.2q-0.3,0.35 -0.25,0.7q0.05,0.4 0.4,0.65q0.3,0.25 0.75,0.25q0.4,-0.05 0.65,-0.4q0.9,-1.2 2.55,-1.4q1.1,-0.15 2.05,0.2q0.45,0.25 0.8,0q0.4,-0.15 0.55,-0.5q0.2,-0.35 0,-0.75q-0.2,-0.4 -0.55,-0.55z" fill="#B8824D" id="svg_37"/>
+   <path d="m7.65,-6.7q0.4,-0.15 0.6,-0.5q0.15,-0.35 0.05,-0.75q-0.15,-0.4 -0.5,-0.55q-0.35,-0.2 -0.75,-0.1q-5.35,1.7 -9.3,-0.85q-0.35,-0.25 -0.75,-0.15q-0.4,0.05 -0.6,0.4q-0.25,0.35 -0.15,0.75q0.05,0.4 0.4,0.65q4.65,3.1 11,1.1z" fill="#7F7058" id="svg_38"/>
+  </g>
+  <g id="Symbol_15_0_Layer0_1_MEMBER_0_FILL">
+   <path d="m-6.1,-11.7q0.9,0 1.5,-0.95q0.65,-0.9 0.65,-2.2q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95m15.3,-5.4q-0.6,0.95 -0.6,2.25q0,1.3 0.6,2.2q0.65,0.95 1.55,0.95q0.9,0 1.5,-0.95q0.65,-0.9 0.65,-2.2q0,-1.3 -0.65,-2.25q-0.6,-0.9 -1.5,-0.9q-0.9,0 -1.55,0.9z" fill="#7F7058" id="svg_39"/>
+  </g>
+  <g id="Symbol_15_0_Layer0_2_FILL">
+   <path d="m-15.25,-41.45l-2.9,4.75l-4.6,3.5q-2.4,13 1.25,25.25q4.95,-4.65 5.6,-16.5q4.75,-17.6 39.5,-29.25q-25.25,5.35 -38.85,12.25z" fill="#B8824D" id="svg_40"/>
+   <path d="m1.6,-26.2q8.35,2.4 17.75,2.15l1,8.1q4.55,-13.5 2.95,-19q-2.2,-7.65 0.3,-18.75q-34.75,11.65 -39.5,29.25q7.2,-4.9 17.5,-1.75z" fill="#C48A51" id="svg_41"/>
+  </g>
+ </defs>
+ <g class="layer" display="inline">
+  <title>Layer 1</title>
+  <g id="svg_53" transform="matrix(1 0 0 1 0 0) matrix(1 0 0 1 971 53.7)">
+   <g id="svg_54" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_55" xlink:href="#Symbol_17_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_56" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_57" xlink:href="#Symbol_17_0_Layer0_1_FILL"/>
+   </g>
+  </g>
+  <g id="legLeft_FL" transform="translate(9 -9) matrix(1 0 0 1 30.75 93.85)">
+   <g id="svg_95" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_96" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="legRight_FL" transform="translate(9 -9) matrix(-1 0 0 1 51.9 93.85)">
+   <g id="svg_97" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_98" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="body_FL" transform="translate(9 -9) matrix(1 0 0 1 41.35 85.15)">
+   <g id="svg_99" transform="matrix( 1.0129852294921875, 0, 0, 1.0081329345703125, 0.5,0.5) ">
+    <use id="svg_100" xlink:href="#Symbol_10_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="armLeft_FL_FL" transform="translate(9 -9) translate(-3 -3) matrix(-0.665939 0.746003 -0.673223 -0.600965 24.2296 69.0576)">
+   <g id="svg_101" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_102" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="handLeft_FL_FL" transform="translate(9 -9) translate(-7 -48) rotate(173.873 16.7565 93.1007) matrix(0.965927 0.258804 -0.258804 0.965927 18.3 95.05)">
+   <g id="svg_103" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_104" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="armRight_FL_FL_FL" transform="translate(9 -9) translate(6 -16) rotate(-120.987 61.2882 77.2209) matrix(-0.965927 0.258804 0.233551 0.871689 57.6 69.35)">
+   <g id="svg_105" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_106" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="handRight_FL_FL_FL" transform="translate(9 -9) translate(9 -50) rotate(-152.513 64.4435 92.5507) matrix(-0.965927 0.258804 0.258804 0.965927 62.9 94.5)">
+   <g id="svg_107" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_108" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="body_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL" transform="matrix( 1, 0, 0, 1, 792,99) ">
+   <g id="svg_440" transform="matrix( 1.0129852294921875, 0, 0, 1.0081329345703125, 0.5,0.5) ">
+    <use id="svg_441" xlink:href="#Symbol_10_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="armRight_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL" transform="matrix( -1, 0, 0, 1, 887,91) ">
+   <g id="svg_442" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_443" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="handRight_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL" transform="matrix( -1, 0, 0, 1, 885,141) ">
+   <g id="svg_444" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_445" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="legRight_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL_FL" transform="matrix( -1, 0, 0, 1, 850,133) ">
+   <g id="svg_446" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_447" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="head_FL_FL_FL_FL_FL_FL_FL_FL_FL" transform="matrix(1 0 0 1 0 0) matrix(1 0 0 1 791.4 52.25)">
+   <g id="svg_448" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_449" xlink:href="#Symbol_12_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_450" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_451" xlink:href="#Symbol_12_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_452" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_453" xlink:href="#Symbol_12_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_454" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_455" xlink:href="#Symbol_12_0_Layer0_1_MEMBER_1_FILL"/>
+   </g>
+   <g id="svg_456" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_457" xlink:href="#Symbol_12_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+  <g id="svg_506" transform="matrix(1 0 0 1 0 0) matrix(1 0 0 1 910.6 53.7)">
+   <g id="svg_507" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_508" xlink:href="#Symbol_15_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_509" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_510" xlink:href="#Symbol_15_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_511" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_512" xlink:href="#Symbol_15_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_513" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_514" xlink:href="#Symbol_15_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+  <g id="svg_515" transform="matrix( 1, 0, 0, 1, 842,99) ">
+   <g id="svg_516" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_517" xlink:href="#Symbol_18_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_58" transform="translate(9 -9) matrix(1 0 0 1 40.6 63.65)">
+   <g id="svg_59" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_60" xlink:href="#Symbol_16_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_61" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_62" xlink:href="#Symbol_16_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_63" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_64" xlink:href="#Symbol_16_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_65" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_66" xlink:href="#Symbol_16_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+  <g id="svg_674" transform="translate(0 -1.67598) rotate(13.5308 138.272 88.5901) matrix(1 0 0 1 139.758 84.1138)">
+   <g id="svg_675" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_676" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_671" transform="translate(1.11732 -2.7933) rotate(-18.115 162.394 88.5901) matrix(-1 0 0 1 160.908 84.1138)">
+   <g id="svg_672" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_673" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_668" transform="translate(27.933 -7.82123) translate(-244 -107) translate(325.075 105.085) matrix(1 0 0 1 41.35 85.15)">
+   <g id="svg_669" transform="matrix( 1.0129852294921875, 0, 0, 1.0081329345703125, 0.5,0.5) ">
+    <use id="svg_670" xlink:href="#Symbol_10_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_665" transform="rotate(9.79852 124.87 50.602) translate(0 -0.558659) matrix(-0.748588 0.663032 -0.598347 -0.675551 129.401 58.578)">
+   <g id="svg_666" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_667" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_662" transform="translate(2.7933 -3.91061) translate(27.933 -7.82123) matrix(-0.988032 -0.15423 0.15423 -0.988032 89.0888 41.4123)">
+   <g id="svg_663" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_664" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_659" transform="rotate(-14.9395 176.296 51.4846) translate(27.933 -7.82123) matrix(0.71917 0.69483 0.627043 -0.649003 143.514 66.52)">
+   <g id="svg_660" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_661" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_656" transform="translate(-2.23464 -0.558659) rotate(-23.9294 182.451 32.8145) matrix(0.976339 0.216232 0.216232 -0.976339 184.72 31.7976)">
+   <g id="svg_657" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_658" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_647" transform="translate(27.933 -7.82123) translate(-244 -107) matrix(1 0 0 1 365.675 168.735)">
+   <g id="svg_648" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_649" xlink:href="#Symbol_16_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_650" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_651" xlink:href="#Symbol_16_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_652" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_653" xlink:href="#Symbol_16_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_654" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_655" xlink:href="#Symbol_16_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+  <g id="svg_704" transform="translate(-55.8659 -40.7821) matrix(0.972244 0.233968 -0.233968 0.972244 295.793 123.734)">
+   <g id="svg_705" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_706" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_701" transform="rotate(30.9665 262.674 85.8389) translate(-55.8659 -40.7821) matrix(-0.950434 0.310925 0.310925 0.950434 315.736 122.828)">
+   <g id="svg_702" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_703" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_698" transform="translate(-55.8659 -40.7821) translate(155.029 40.8241) translate(27.933 -7.82123) translate(-244 -107) translate(325.075 105.085) matrix(1 0 0 1 41.35 85.15)">
+   <g id="svg_699" transform="matrix( 1.0129852294921875, 0, 0, 1.0081329345703125, 0.5,0.5) ">
+    <use id="svg_700" xlink:href="#Symbol_10_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_695" transform="rotate(-22.5527 224.032 50.6437) translate(-55.8659 -40.7821) matrix(-0.850505 0.525962 -0.47465 -0.767525 283.102 99.5063)">
+   <g id="svg_696" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_697" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_692" transform="translate(-6.14525 4.46927) rotate(-29.733 220.721 31.4958) matrix(-0.988032 -0.15423 0.15423 -0.988032 218.978 29.7224)">
+   <g id="svg_693" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_694" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_689" transform="translate(-55.8659 -40.7821) matrix(0.873987 0.485943 0.438536 -0.788717 328.5 100.529)">
+   <g id="svg_690" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_691" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_686" transform="translate(-55.8659 -40.7821) translate(155.029 40.8241) translate(-2.23464 -0.558659) rotate(-23.9294 182.451 32.8145) matrix(0.976339 0.216232 0.216232 -0.976339 184.72 31.7976)">
+   <g id="svg_687" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_688" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_677" transform="translate(-55.8659 -40.7821) translate(155.029 40.8241) matrix(1 0 0 1 149.608 53.9138)">
+   <g id="svg_678" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_679" xlink:href="#Symbol_16_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_680" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_681" xlink:href="#Symbol_16_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_682" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_683" xlink:href="#Symbol_16_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_684" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_685" xlink:href="#Symbol_16_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+  <g id="svg_734" transform="matrix(1 0 0 1 0 0) rotate(-23.7909 338.028 86.9483) translate(42.4581 -40.7821) matrix(0.972244 0.233968 -0.233968 0.972244 298.061 123.726)">
+   <g id="svg_735" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_736" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_731" transform="translate(0.558659 2.23464) matrix(-0.998629 -0.0523357 -0.0523357 0.998629 362.017 81.2824)">
+   <g id="svg_732" transform="matrix( 1.0071868896484375, 0, 0, 0.9892425537109375, 0,0) ">
+    <use id="svg_733" xlink:href="#Symbol_11_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_728" transform="matrix(1 0 0 1 0 0) translate(42.4581 -40.7821) matrix(1 0 0 1 307.655 116.23)">
+   <g id="svg_729" transform="matrix( 1.0129852294921875, 0, 0, 1.0081329345703125, 0.5,0.5) ">
+    <use id="svg_730" xlink:href="#Symbol_10_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_725" transform="translate(42.4581 -40.7821) translate(58.134 40.7741) rotate(-22.5527 224.032 50.6437) translate(-55.8659 -40.7821) matrix(-0.850505 0.525962 -0.47465 -0.767525 283.102 99.5063)">
+   <g id="svg_726" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_727" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_722" transform="translate(42.4581 -40.7821) translate(58.134 40.7741) translate(-6.14525 4.46927) rotate(-29.733 220.721 31.4958) matrix(-0.988032 -0.15423 0.15423 -0.988032 218.978 29.7224)">
+   <g id="svg_723" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_724" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_719" transform="translate(42.4581 -40.7821) translate(58.134 40.7741) translate(-55.8659 -40.7821) matrix(0.873987 0.485943 0.438536 -0.788717 328.5 100.529)">
+   <g id="svg_720" transform="matrix( 0.9970703125, 0, 0, 1.006103515625, -0.4,-0.05) ">
+    <use id="svg_721" xlink:href="#Symbol_8_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_716" transform="translate(42.4581 -40.7821) translate(58.134 40.7741) translate(-55.8659 -40.7821) translate(155.029 40.8241) translate(-2.23464 -0.558659) rotate(-23.9294 182.451 32.8145) matrix(0.976339 0.216232 0.216232 -0.976339 184.72 31.7976)">
+   <g id="svg_717" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_718" xlink:href="#Symbol_9_0_Layer0_0_FILL"/>
+   </g>
+  </g>
+  <g id="svg_707" transform="translate(42.4581 -40.7821) translate(58.134 40.7741) matrix(1 0 0 1 248.771 53.9558)">
+   <g id="svg_708" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_709" xlink:href="#Symbol_16_0_Layer0_0_FILL"/>
+   </g>
+   <g id="svg_710" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_711" xlink:href="#Symbol_16_0_Layer0_1_FILL"/>
+   </g>
+   <g id="svg_712" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_713" xlink:href="#Symbol_16_0_Layer0_1_MEMBER_0_FILL"/>
+   </g>
+   <g id="svg_714" transform="matrix( 1, 0, 0, 1, 0,0) ">
+    <use id="svg_715" xlink:href="#Symbol_16_0_Layer0_2_FILL"/>
+   </g>
+  </g>
+ </g>
+</svg>
